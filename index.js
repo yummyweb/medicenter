@@ -9,6 +9,10 @@ expressApp.use(cors());
 
 const axios = require("axios").default;
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const main = async () => {
   const app = await dasha.deploy(`${__dirname}/app`);
 
@@ -27,7 +31,7 @@ const main = async () => {
   app.setExternal("contactNumber", async (args, conv) => {
     const res = await axios.get("https://api.rootnet.in/covid19-in/contacts");
     const contacts = res.data.data.contacts.regional;
-    const areaContact = contacts.filter(obj => obj.loc === args.state)
+    const areaContact = contacts.filter(obj => obj.loc === capitalizeFirstLetter(args.state))
     return(`The helpline number for ${areaContact[0].loc} is ${areaContact[0].number.replace(/(\d)(?=(\d{1})+$)/g, '$1 ')}.`)
   });
 
