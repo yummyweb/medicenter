@@ -1,0 +1,195 @@
+{
+    "version": "v2",
+    "intents": 
+    {
+      "yes": {
+        "includes": [
+          "yes",
+          "correct",
+          "sure",
+          "yep",
+          "I confirm",
+          "confirmed",
+          "I do",
+          "yeah",
+          "that's right",
+          "yea",
+          "definitely"
+        ],
+        "excludes": []
+      },
+      "no": {
+        "includes": [
+          "no",
+          "definitely not",
+          "wrong",
+          "no, that's it, thank you",
+          "no thank you!",
+          "no! Let's catch some roadrunner",
+          "incorrect",
+          "I do not",
+          "I don't",
+          "i'll take a raincheck"
+        ]
+      },
+      "beds": {
+        "includes": [
+          "I need to find hospital beds",
+          "Where can I find beds?",
+          "Empty beds",
+          "Could you provide a list of available beds?",
+          "I need to find vacant beds",
+          "Any available beds?"
+        ]
+      },
+      "helpline": {
+        "includes": [
+          "Contact numbers",
+          "I need to know the helpline number",
+          "What's the covid helpline number",
+          "I need to contact medical services"
+        ]
+      },
+      "wait": {
+        "includes": [
+          "Hold on for a minute",
+          "Wait please",
+          "Give me a second ",
+          "One sec please",
+          "Let me think about it",
+          "Give me a minute",
+          "Hold on",
+          "Hold on I need to have a look",
+          "Hold the line",
+          "Wait please"
+        ],
+        "excludes": [
+          "Hello"
+        ]
+      }, 
+  
+      "repeat": {
+        "includes": [
+          "Can you repeat please",
+          "Sorry, could you say it again",
+          "I didn't hear you ",
+          "I couldn't hear what you said",
+          "Can you repeat please? ",
+          "Please repeat it"
+        ]
+      }
+    },
+    "entities": {
+      "city": {
+        "open_set": true,
+        "values": [
+          {
+            "value": "Haryana",
+            "synonyms": [
+              "hariana", "har yana", "haryaana"
+            ]
+          },
+          {
+            "value": "Delhi",
+            "synonyms": [
+              "delli", "deli", "dilli", "daily"
+            ]
+          },
+          {
+            "value": "Bihar",
+            "synonyms": [
+              "biyar", "biyaar", "bhihar", "bihaar"
+            ]
+          },
+          {
+            "value": "Kerala",
+            "synonyms": [
+              "karala", "kerela", "kerel"
+            ]
+          },
+          {
+            "value": "Sikkim",
+            "synonyms": [
+              "sikhim", "sikh im"
+            ]
+          },
+          {
+            "value": "Assam",
+            "synonyms": [
+              "asam", "asaam"
+            ]
+          },
+          {
+            "value": "Chandigarh",
+            "synonyms": [
+              "chandigar", "chandi gar"
+            ]
+          },
+          {
+            "value": "Puducherry",
+            "synonyms": [
+              "pondecherry", "pudu cherry", "pudu cherry"
+            ]
+          }
+        ],
+        "includes": [
+          "(Chandigarh)[city]",
+          "(Puducherry)[city] is where I live",
+          "I need hospital beds in (Assam)[city]",
+          "Are there any hospital beds in (Sikkim)[city]",
+          "I am in need of beds in (Kerala)[city]"
+        ]
+      },
+      "state": {
+        "open_set": true,
+        "values": [
+          {
+            "value": "Haryana",
+            "synonyms": [
+              "hariana", "har yana", "haryaana"
+            ]
+          },
+          {
+            "value": "Delhi",
+            "synonyms": [
+              "delli", "deli", "dilli", "daily"
+            ]
+          },
+          {
+            "value": "Bihar",
+            "synonyms": [
+              "biyar", "biyaar", "bhihar", "bihaar"
+            ]
+          },
+          {
+            "value": "Kerala",
+            "synonyms": [
+              "karala", "kerela", "kerel"
+            ]
+          },
+          {
+            "value": "Ladakh",
+            "synonyms": [
+              "ladak", "ladhakh"
+            ]
+          },
+          {
+            "value": "Faridabad",
+            "synonyms": [
+              "farida bad", "fareedabad"
+            ]
+          },
+          {
+            "value": "Puducherry",
+            "synonyms": [
+              "pondecherry", "pudu cherry", "pudu cherry"
+            ]
+          }
+        ],
+        "includes": [
+          "(Ladakh)[state]",
+          "I live in (Puducherry)[state]"
+        ]
+      }
+    }
+}
